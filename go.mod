@@ -1,4 +1,4 @@
-module github.com/greenpau/caddy-auth-portal
+module github.com/42wim/caddy-auth-portal
 
 go 1.14
 

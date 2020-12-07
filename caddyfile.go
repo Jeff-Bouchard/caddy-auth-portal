@@ -23,12 +23,12 @@ import (
 
 	jwtconfig "github.com/greenpau/caddy-auth-jwt/pkg/config"
 
-	"github.com/greenpau/caddy-auth-portal/pkg/backends"
-	"github.com/greenpau/caddy-auth-portal/pkg/cookies"
-	"github.com/greenpau/caddy-auth-portal/pkg/core"
-	"github.com/greenpau/caddy-auth-portal/pkg/registration"
-	"github.com/greenpau/caddy-auth-portal/pkg/ui"
-	"github.com/greenpau/caddy-auth-portal/pkg/utils"
+	"github.com/42wim/caddy-auth-portal/pkg/backends"
+	"github.com/42wim/caddy-auth-portal/pkg/cookies"
+	"github.com/42wim/caddy-auth-portal/pkg/core"
+	"github.com/42wim/caddy-auth-portal/pkg/registration"
+	"github.com/42wim/caddy-auth-portal/pkg/ui"
+	"github.com/42wim/caddy-auth-portal/pkg/utils"
 
 	"github.com/caddyserver/caddy/v2"
 	"github.com/caddyserver/caddy/v2/caddyconfig"

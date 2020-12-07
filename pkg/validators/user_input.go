@@ -16,7 +16,7 @@ package validators
 
 import (
 	"fmt"
-	"github.com/greenpau/caddy-auth-portal/pkg/utils"
+	"github.com/42wim/caddy-auth-portal/pkg/utils"
 	"net"
 	"regexp"
 	"strings"

@@ -22,9 +22,9 @@ import (
 	"strings"
 
 	jwtclaims "github.com/greenpau/caddy-auth-jwt/pkg/claims"
-	"github.com/greenpau/caddy-auth-portal/pkg/backends"
-	"github.com/greenpau/caddy-auth-portal/pkg/ui"
-	"github.com/greenpau/caddy-auth-portal/pkg/utils"
+	"github.com/42wim/caddy-auth-portal/pkg/backends"
+	"github.com/42wim/caddy-auth-portal/pkg/ui"
+	"github.com/42wim/caddy-auth-portal/pkg/utils"
 	"go.uber.org/zap"
 )
 

@@ -16,8 +16,8 @@ package handlers
 
 import (
 	"encoding/json"
-	"github.com/greenpau/caddy-auth-portal/pkg/cookies"
-	"github.com/greenpau/caddy-auth-portal/pkg/ui"
+	"github.com/42wim/caddy-auth-portal/pkg/cookies"
+	"github.com/42wim/caddy-auth-portal/pkg/ui"
 	"go.uber.org/zap"
 	"net/http"
 	"net/url"

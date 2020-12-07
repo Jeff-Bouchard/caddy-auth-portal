@@ -16,21 +16,22 @@ package oauth2
 
 import (
 	"fmt"
-	jwtlib "github.com/dgrijalva/jwt-go"
-	jwtclaims "github.com/greenpau/caddy-auth-jwt/pkg/claims"
-	"github.com/greenpau/caddy-auth-portal/pkg/errors"
 	"strings"
 	"time"
+
+	jwtlib "github.com/dgrijalva/jwt-go"
+	jwtclaims "github.com/greenpau/caddy-auth-jwt/pkg/claims"
+	"github.com/42wim/caddy-auth-portal/pkg/errors"
 )
 
 func (b *Backend) validateAccessToken(state string, data map[string]interface{}) (*jwtclaims.UserClaims, error) {
-	for _, k := range []string{"id_token"} {
+	for _, k := range []string{"access_token"} {
 		if _, exists := data[k]; !exists {
 			return nil, fmt.Errorf("token response has no %s field", k)
 		}
 	}
 
-	tokenString := data["id_token"].(string)
+	tokenString := data["access_token"].(string)
 
 	token, err := jwtlib.Parse(tokenString, func(token *jwtlib.Token) (interface{}, error) {
 		if _, validMethod := token.Method.(*jwtlib.SigningMethodRSA); !validMethod {
@@ -54,7 +55,6 @@ func (b *Backend) validateAccessToken(state string, data map[string]interface{})
 		}
 		return key, nil
 	})
-
 	if err != nil {
 		return nil, fmt.Errorf("failed to parse id_token: %s", err)
 	}

@@ -15,7 +15,7 @@
 package handlers
 
 import (
-	"github.com/greenpau/caddy-auth-portal/pkg/ui"
+	"github.com/42wim/caddy-auth-portal/pkg/ui"
 	"go.uber.org/zap"
 	"io"
 	"net/http"
